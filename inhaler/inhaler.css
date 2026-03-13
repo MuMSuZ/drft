@@ -1,0 +1,137 @@
+/* --- TEMEL AYARLAR (Bu sayfa için) --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header & Navigasyon (Aynısı korunmalı) */
+header {
+    background-color: #005f73;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li { margin: 0 20px; }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* --- İNHALER SAYFASI ÖZEL TASARIMI --- */
+.device-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 3rem auto 0; /* Ortalama */
+}
+
+.device-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+    border-color: #005f73;
+}
+
+.img-box {
+    height: 220px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.img-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.device-card h3 {
+    padding: 1.5rem;
+    color: #005f73;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; align-items: center; gap: 10px; }
+}
+
+/* İnhaler Sayfası Stilleri */
+.device-section {
+    padding-top: 2rem; /* Header'dan pay */
+}
+
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+    padding: 0 20px;
+}
+
+.device-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-decoration: none; /* Link alt çizgisini kaldır */
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.device-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.img-box {
+    width: 100%;
+    height: 200px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.device-card h3 {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    color: #005f73;
+    font-size: 1.2rem;
+}
